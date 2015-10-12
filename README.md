@@ -56,7 +56,9 @@ sudo apt-get -y install ngrep         # Network packet analyzer.
 sudo apt-get -y install nmap          # Offensive and defensive network security scanner
 ```
 
-### Examples ###
+## Examples ##
+
+### colored system logging ###
 ```
 tail -f /var/log/{messages,kernel,dmesg,syslog} | ccze
 ```
