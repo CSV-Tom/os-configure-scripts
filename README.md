@@ -27,6 +27,7 @@ sudo apt-get -y install inkscape   #
 sudo apt-get -y install okular     # PDF Viewer
 sudo apt-get -y install newsbeuter # RSS Feeds and Podcasts (Podbeuter)
 sudo apt-get -y install mp3blaster # For newsbeuter podcasts required
+sudo apt-get -y install ssh        # SSH-Service
 ```
 
 ### Developer tools ###
@@ -54,6 +55,16 @@ sudo apt-get install -y biber
 sudo apt-get -y install curl          # Transfer data
 sudo apt-get -y install ngrep         # Network packet analyzer.
 sudo apt-get -y install nmap          # Offensive and defensive network security scanner
+```
+
+### SSH-Server ###
+`
+sudo apt-get install ssh
+`
+```
+sudo /etc/init.d/ssh start
+sudo /etc/init.d/ssh stop
+sudo /etc/init.d/ssh restart
 ```
 
 ## Examples ##
