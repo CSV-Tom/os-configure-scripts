@@ -23,6 +23,10 @@ sudo apt-get -y install iotop      #
 sudo apt-get -y install pstree     # Shows running processes as a tree
 sudo apt-get -y install sysstat    # iostat
 sudo apt-get -y install pv         # Monitoring data send via a pipe
+sudo apt-get -y install inkscape   # 
+sudo apt-get -y install okular     # PDF Viewer
+sudo apt-get -y install newsbeuter # RSS Feeds and Podcasts (Podbeuter)
+sudo apt-get -y install mp3blaster # For newsbeuter podcasts required
 ```
 
 ### Developer tools ###
@@ -39,6 +43,11 @@ sudo apt-get -y install valgrind
 sudo apt-get -y install openjdk-7-jdk openjdk-7-source openjdk-7-demo openjdk-7-doc openjdk-7-jre-headless openjdk-7-jre-lib 
 ```
 
+### LaTeX ### 
+```
+sudo apt-get install -y texlive-full
+sudo apt-get install -y biber
+```
 
 ### Network tools ###
 ```
@@ -47,3 +56,5 @@ sudo apt-get -y install ngrep         # Network packet analyzer.
 sudo apt-get -y install nmap          # Offensive and defensive network security scanner
 
 ```
+
+
