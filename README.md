@@ -54,7 +54,9 @@ sudo apt-get install -y biber
 sudo apt-get -y install curl          # Transfer data
 sudo apt-get -y install ngrep         # Network packet analyzer.
 sudo apt-get -y install nmap          # Offensive and defensive network security scanner
-
 ```
 
-
+### Examples ###
+```
+tail -f /var/log/{messages,kernel,dmesg,syslog} | ccze
+```
