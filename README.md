@@ -43,7 +43,7 @@ sudo apt-get -y install valgrind
 sudo apt-get -y install openjdk-7-jdk openjdk-7-source openjdk-7-demo openjdk-7-doc openjdk-7-jre-headless openjdk-7-jre-lib 
 ```
 
-### LaTeX ### 
+### LaTeX ###
 ```
 sudo apt-get install -y texlive-full
 sudo apt-get install -y biber
