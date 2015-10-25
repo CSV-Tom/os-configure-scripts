@@ -27,6 +27,7 @@ sudo apt-get -y install inkscape   #
 sudo apt-get -y install okular     # PDF Viewer
 sudo apt-get -y install newsbeuter # RSS Feeds and Podcasts (Podbeuter)
 sudo apt-get -y install mp3blaster # For newsbeuter podcasts required
+sudo apt-get -y install cmus       # Music Player
 sudo apt-get -y install ssh        # SSH-Service
 ```
 
@@ -42,6 +43,7 @@ sudo apt-get -y install doxygen
 sudo apt-get -y install inotify
 sudo apt-get -y install valgrind
 sudo apt-get -y install openjdk-7-jdk openjdk-7-source openjdk-7-demo openjdk-7-doc openjdk-7-jre-headless openjdk-7-jre-lib 
+sudo apt-get -y install asciidoc
 ```
 
 ### LaTeX ###
