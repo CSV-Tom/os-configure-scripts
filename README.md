@@ -29,6 +29,8 @@ sudo apt-get -y install newsbeuter # RSS Feeds and Podcasts (Podbeuter)
 sudo apt-get -y install mp3blaster # For newsbeuter podcasts required
 sudo apt-get -y install cmus       # Music Player
 sudo apt-get -y install ssh        # SSH-Service
+sudo apt-get -y install dos2unix   # Convert CRLF -> LF
+sudo apt-get -y install unix2dos   # Convert LF -> CRLF
 ```
 
 ### Developer tools ###
