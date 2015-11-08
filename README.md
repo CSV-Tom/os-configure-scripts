@@ -58,6 +58,7 @@ sudo apt-get install -y biber
 sudo apt-get -y install curl          # Transfer data
 sudo apt-get -y install ngrep         # Network packet analyzer.
 sudo apt-get -y install nmap          # Offensive and defensive network security scanner
+sudo apt-get -y install iptraf        # IPTraffic Launcher
 ```
 
 ### SSH-Server ###
