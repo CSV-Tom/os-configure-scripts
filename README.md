@@ -9,7 +9,6 @@ sudo apt-get -y install mutt       # E-Mail client
 sudo apt-get -y install htop       #
 sudo apt-get -y install mc         # Midnight Commander
 sudo apt-get -y install ccze       # Colored log for console
-sudo apt-get -y install iptraf     # IP Traffic Monitoring Tool
 sudo apt-get -y install vim        #
 sudo apt-get -y install vifm       # File Manger
 sudo apt-get -y install tmux       # Terminal Multiplexer
@@ -29,6 +28,8 @@ sudo apt-get -y install newsbeuter # RSS Feeds and Podcasts (Podbeuter)
 sudo apt-get -y install mp3blaster # For newsbeuter podcasts required
 sudo apt-get -y install cmus       # Music Player
 sudo apt-get -y install ssh        # SSH-Service
+sudo apt-get -y install fdupes     # Find file duplicates
+sudo apt-get -y install sysstat	   # For iostat
 ```
 
 ### Developer tools ###
@@ -58,7 +59,7 @@ sudo apt-get install -y biber
 sudo apt-get -y install curl          # Transfer data
 sudo apt-get -y install ngrep         # Network packet analyzer.
 sudo apt-get -y install nmap          # Offensive and defensive network security scanner
-sudo apt-get -y install iptraf        # IPTraffic Launcher
+sudo apt-get -y install iptraf        # IP Traffic Monitoring Tool
 ```
 
 ### SSH-Server ###
