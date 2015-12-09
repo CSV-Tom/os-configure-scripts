@@ -30,6 +30,8 @@ sudo apt-get -y install cmus       # Music Player
 sudo apt-get -y install ssh        # SSH-Service
 sudo apt-get -y install fdupes     # Find file duplicates
 sudo apt-get -y install sysstat	   # For iostat
+sudo apt-get -y install dos2unix   # Convert CRLF -> LF
+sudo apt-get -y install unix2dos   # Convert LF -> CRLF
 ```
 
 ### Developer tools ###
