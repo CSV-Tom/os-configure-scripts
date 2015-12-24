@@ -1,13 +1,10 @@
-The content is copy from website[^1]
+The content is copy from website `http://ubuntuhandbook.org/index.php/2015/01/install-nvidia-346-35-ubuntu-1404/`
 
 Before the xorg-edgers PPA updates for this driver, you can download & install the official NVIDIA package by following below steps:
 
 1. Select download the official installer from official website [^2]:
 
-	---
 	32-bit or 64-bit? Check your OS type by `uname -a`
-	---
-	
 	```
 	wget http://us.download.nvidia.com/XFree86/Linux-x86_64/352.63/NVIDIA-Linux-x86_64-352.63.run
 	```
@@ -29,9 +26,7 @@ Before the xorg-edgers PPA updates for this driver, you can download & install t
 	alias nouveau off
 	alias lbm-nouveau off
 	```
-	---
-	Disable Nouveau Driver
-	---
+	**Disable Nouveau Driver**
 
 4. You can also disable the Kernel Nouveau by running below commands one by one:
 	```
@@ -67,5 +62,5 @@ Also undo the step 3 & 4 by removing the
 cd /etc/modprobe.d/ && sudo rm blacklist-nouveau.conf nouveau-kms.conf && sudo update-initramfs -u
 ```
 
-[^1](http://ubuntuhandbook.org/index.php/2015/01/install-nvidia-346-35-ubuntu-1404/)
-[^2](http://www.nvidia.com/download/driverResults.aspx/95159/en-us)
+[1](http://ubuntuhandbook.org/index.php/2015/01/install-nvidia-346-35-ubuntu-1404/)
+[2](http://www.nvidia.com/download/driverResults.aspx/95159/en-us)
