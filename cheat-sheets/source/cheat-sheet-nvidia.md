@@ -4,12 +4,13 @@ Before the xorg-edgers PPA updates for this driver, you can download & install t
 
 1. Select download the official installer from links below:
 
-32-bit Linux | 64-bit Linux | 32-bit ARM Linux
+	32-bit Linux | 64-bit Linux | 32-bit ARM Linux
 
-32-bit or 64-bit? Check your OS type by going to top-right corner shutdown menu (gear button) and clicking ‘About This Computer’
-```
-wget http://us.download.nvidia.com/XFree86/Linux-x86_64/352.63/NVIDIA-Linux-x86_64-352.63.run
-```
+	32-bit or 64-bit? Check your OS type by going to top-right corner shutdown menu (gear button) and clicking ‘About This Computer’
+
+	```
+	wget http://us.download.nvidia.com/XFree86/Linux-x86_64/352.63/NVIDIA-Linux-x86_64-352.63.run
+	```
 
 2. To be able to install the new driver, you have to remove the previous driver by running below command in a terminal window (Open terminal from the Dash or by pressing Ctrl+Alt+T on keyboard):
 ```
@@ -33,7 +34,8 @@ Disable Nouveau Driver
 4. You can also disable the Kernel Nouveau by running below commands one by one:
 ```
 echo options nouveau modeset=0 | sudo tee -a /etc/modprobe.d/nouveau-kms.conf
-
+```
+```
 sudo update-initramfs -u
 ```
 
@@ -42,7 +44,9 @@ sudo update-initramfs -u
 6. When you’re at the black & white text console, the graphics session is still there and you can switch back by pressing Ctrl+Alt+F7. You have to kill the graphics session by running below command:
 ```
 sudo stop lightdm
+```
 or 
+```
 sudo /etc/init.d/lightdm stop
 ```
 Replace lightdm with gdm, mdm, or kdm for GNOME, Linux Mint, or KUbuntu.
