@@ -1,15 +1,18 @@
-The content is copy from website `http://ubuntuhandbook.org/index.php/2015/01/install-nvidia-346-35-ubuntu-1404/`
+The content is copy from website: 
+`
+http://ubuntuhandbook.org/index.php/2015/01/install-nvidia-346-35-ubuntu-1404/
+`
 
 Before the xorg-edgers PPA updates for this driver, you can download & install the official NVIDIA package by following below steps:
 
-1. Select download the official installer from official website [^2]:
+1. Select download the official installer from official website:
 
 	32-bit or 64-bit? Check your OS type by `uname -a`
 	```
 	wget http://us.download.nvidia.com/XFree86/Linux-x86_64/352.63/NVIDIA-Linux-x86_64-352.63.run
 	```
 
-2. To be able to install the new driver, you have to remove the previous driver by running below command in a terminal window (Open terminal from the Dash or by pressing Ctrl+Alt+T on keyboard):
+2. To be able to install the new driver, you have to remove the previous driver by running below command in a terminal window (Open terminal from the Dash or by pressing `Ctrl+Alt+T` on keyboard):
 	```
 	sudo apt-get remove nvidia* && sudo apt-get autoremove
 	```
