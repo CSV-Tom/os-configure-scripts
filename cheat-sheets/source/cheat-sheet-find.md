@@ -9,6 +9,11 @@ find <location> <comparison-criteria> <search-term>
 
 ## Examples
 
+Search for files in multiple directories
+```
+find /tmp /etc -name '*.php'
+```
+
 Limit depth of directory traversal
 ```
 find . -maxdepth 2 -name '*.php'
