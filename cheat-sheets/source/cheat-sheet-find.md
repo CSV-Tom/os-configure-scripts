@@ -9,3 +9,180 @@ find -maxdepth 1 -type f | xargs grep -F 'example'
 find -type f ! -perm -444
 find -type d ! -perm -111
 ```
+Delete all file with extension *.aux or *.o.
+```
+find -name "*.aux" -delete 
+find -name "*.o" -delete
+```
+
+Delete only files whose name is .DS_Store (Attention: Mac OS-Systems!).
+```
+find . -type f -name .DS_Store -delete
+```
+
+Find all directories or files whose name is index.php or os-configure. 
+```
+find / -type d -name os-configure
+find / -type f -name index.php
+```
+
+<Description - Ignoring Case>
+```
+find -iname InDeX.pHp
+```
+
+Find all php files in a directory.
+```
+find . -type f -name "*.php"
+```
+
+Find all the files whose permissions are 777.
+```
+find . -type f -perm 0777 -print
+```
+
+Find all the files without permission 777.
+```
+find / -type f ! -perm 777
+```
+
+Find all the SGID bit files whose permissions set to 644.
+```
+find / -perm 2644
+```
+
+Find all the Sticky Bit set files whose permission are 551.
+```
+find / -perm 1551
+```
+
+Find all SUID set files.
+```
+find / -perm /u=s
+```
+
+Find all SGID set files.
+```
+find / -perm /g+s
+```
+
+Find all Read Only files.
+```
+find / -perm /u=r
+```
+
+Find all Executable files.
+```
+find / -perm /a=x
+```
+
+Find all 777 permission files and use chmod command to set permissions to 644.
+```
+find / -type f -perm 0777 -print -exec chmod 644 {} \;
+```
+
+Find all 777 permission directories and use chmod command to set permissions to 755.
+```
+find / -type d -perm 777 -print -exec chmod 755 {} \;
+```
+
+To find a single file called tmux.conf and remove it.
+```
+find . -type f -name "tmux.conf" -exec rm -f {} \;
+```
+
+To find and remove multiple files such as .mp3 or .txt, then use.
+```
+find . -type f -name "*.txt" -exec rm -f {} \;
+find . -type f -name "*.mp3" -exec rm -f {} \;
+```
+
+To file all empty files under certain path.
+```
+find /tmp -type f -empty
+```
+
+To file all empty directories under certain path.
+```
+find /tmp -type d -empty
+```
+
+To find all hidden files, use below command.
+```
+find /tmp -type f -name ".*"
+```
+
+To find all or single file called tecmint.txt under / root directory of owner root.
+```
+find / -user root -name tecmint.txt
+```
+
+To find all files that belongs to user Tecmint under /home directory.
+```
+find /home -user tecmint
+```
+
+To find all files that belongs to group Developer under /home directory.
+```
+find /home -group developer
+```
+
+To find all .txt files of user Tecmint under /home directory.
+```
+find /home -user tecmint -iname "*.txt"
+```
+
+To find all the files which are modified 50 days back.
+```
+find / -mtime 50
+```
+
+To find all the files which are accessed 50 days back.
+```
+find / -atime 50
+```
+
+To find all the files which are modified more than 50 days back and less than 100 days.
+```
+%find / -mtime +50 –mtime -100
+```
+
+To find all the files which are changed in last 1 hour.
+```
+find / -cmin -60
+```
+
+To find all the files which are modified in last 1 hour.
+```
+find / -mmin -60
+```
+
+To find all the files which are accessed in last 1 hour.
+```
+find / -amin -60
+```
+
+To find all 50MB files, use.
+```
+find / -size 50M
+```
+
+To find all the files which are greater than 50MB and less than 100MB.
+```
+find / -size +50M -size -100M
+```
+
+To find all 100MB files and delete them using one single command.
+```
+find / -size +100M -exec rm -rf {} \;
+```
+
+Find all .mp3 files with more than 10MB and delete them using one single command.
+
+```
+find / -type f -name *.mp3 -size +10M -exec rm {} \;
+```
+
+That’s it, We are ending this post here, In our next article we will discuss more about other Linux commands in depth with practical examples. Let us know your opinions on this article using our comment section
+
+sudo rsync -avI --stats --progress --delete /home/buhrtz/Desktop/* /mnt/hdd/2015-12-23-Backup-Laptop/
