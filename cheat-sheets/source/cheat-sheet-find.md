@@ -264,16 +264,13 @@ Find largest and smallest files. The find command when used in combination with 
 ```
 find . -type f -exec ls -s {} \; | sort -n -r | head -5
 ```
+
 Similary when sorted in ascending order, it would show the smallest files first
 ```
 find . -type f -exec ls -s {} \; | sort -n | head -5
 ```
 ## References
-
 1. http://superuser.com/questions/91935/how-to-chmod-all-directories-except-files-recursively/91966
-
 2. http://www.tecmint.com/35-practical-examples-of-linux-find-command/
-
 3. http://www.binarytides.com/linux-find-command-examples/
-
 4. http://alvinalexander.com/unix/edu/examples/find.shtml
