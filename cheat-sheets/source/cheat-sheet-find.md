@@ -1,12 +1,30 @@
 # find
-The following commands were collected from several sites. The sources can be found under the headline references.
+The following commands were collected from several sites. The sources can be found under the headline references. The basic syntax of the find command looks like this:
+`
+find <location> <comparison-criteria> <search-term>
+`
 
 ## Commands
+
+Limit depth of directory traversal
 ```
-find -type f -print0 | xargs -r0 grep -F 'example'
-find -name '*.[ch]' | xargs grep -E 'expr'	
-find -type f -print0 | xargs -r0 grep -F 'example'
-find -maxdepth 1 -type f | xargs grep -F 'example'
+find . -maxdepth 2 -name '*.php'
+```
+
+Invert matches 
+```
+find . -not -name '*.php'
+find . ! -name '*.php'
+```
+
+Combine multiple search criterias
+```
+find . -name 'abc*' ! -name '*.php'
+```
+
+OR operator
+```
+find -name '*.php' -o -name '*.txt'
 ```
 
 Delete all files with extension *.aux or *.o
@@ -133,7 +151,7 @@ find /tmp -type d -empty
 
 To find all hidden files, use below command.
 ```
-find /tmp -type f -name ".*"
+find /tmp -type f -name '.*'
 ```
 
 To find all or single file called tecmint.txt under / root directory of owner root.
@@ -212,3 +230,5 @@ find / -type f -name *.mp3 -size +10M -exec rm {} \;
 1. http://superuser.com/questions/91935/how-to-chmod-all-directories-except-files-recursively/91966
 
 2. http://www.tecmint.com/35-practical-examples-of-linux-find-command/
+
+3. http://www.binarytides.com/linux-find-command-examples/
