@@ -25,7 +25,7 @@ Combine multiple search criterias
 find . -name 'abc*' ! -name '*.php'
 ```
 
-OR operator
+or operator
 ```
 find -name '*.php' -o -name '*.txt'
 ```
@@ -52,9 +52,32 @@ find / -type d -name os-configure
 find / -type f -name index.php
 ```
 
-Description - Ignoring Case
+Find files with different extensions
 ```
-find -iname InDeX.pHp
+find . -type f \( -name "*.c" -o -name "*.sh" \)
+find . -type f \( -name "*cache" -o -name "*xml" -o -name "*html" \)
+```
+
+Find files by text in the file (find + grep)
+```
+find . -type f -name "*.java" -exec grep -l StringBuffer {} \;    
+```
+
+Find files by text in the file (find + grep) and ignore case with -i option.
+```
+find . -type f -name "*.java" -exec grep -il string {} \;
+```
+
+Find files and grep content 5 lines before, 10 lines after grep matches
+```
+find . -type f -name "*.php" -exec grep -B5 -A10 'null' {} \;
+```
+
+case-insensitive searching
+```
+find . -iname InDeX.pHp
+find . -iname foo -type d
+find . -iname foo -type f
 ```
 
 Find all php files in a directory.
@@ -247,3 +270,5 @@ find . -type f -exec ls -s {} \; | sort -n | head -5
 2. http://www.tecmint.com/35-practical-examples-of-linux-find-command/
 
 3. http://www.binarytides.com/linux-find-command-examples/
+
+4. http://alvinalexander.com/unix/edu/examples/find.shtml
