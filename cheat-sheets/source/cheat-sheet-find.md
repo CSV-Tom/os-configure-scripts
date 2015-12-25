@@ -9,7 +9,7 @@ find -maxdepth 1 -type f | xargs grep -F 'example'
 find -type f ! -perm -444
 find -type d ! -perm -111
 ```
-Delete all file with extension *.aux or *.o.
+Delete all files with extension *.aux or *.o
 ```
 find -name "*.aux" -delete 
 find -name "*.o" -delete
@@ -26,7 +26,7 @@ find / -type d -name os-configure
 find / -type f -name index.php
 ```
 
-<Description - Ignoring Case>
+Description - Ignoring Case
 ```
 find -iname InDeX.pHp
 ```
@@ -34,6 +34,25 @@ find -iname InDeX.pHp
 Find all php files in a directory.
 ```
 find . -type f -name "*.php"
+```
+
+To recursively give directories read & execute privileges:
+```
+find /path/to/base/dir -type d -exec chmod 755 {} +
+```
+To recursively give files read privileges: 
+```
+find /path/to/base/dir -type f -exec chmod 644 {} +
+```
+or, if there are many objects to process:
+```
+chmod 755 $(find /path/to/base/dir -type d)
+chmod 644 $(find /path/to/base/dir -type f)
+```
+or, to reduce chmod spawning
+```
+find /path/to/base/dir -type d -print0 | xargs -0 chmod 755 
+find /path/to/base/dir -type f -print0 | xargs -0 chmod 644
 ```
 
 Find all the files whose permissions are 777.
@@ -183,6 +202,5 @@ Find all .mp3 files with more than 10MB and delete them using one single command
 find / -type f -name *.mp3 -size +10M -exec rm {} \;
 ```
 
-That’s it, We are ending this post here, In our next article we will discuss more about other Linux commands in depth with practical examples. Let us know your opinions on this article using our comment section
-
-sudo rsync -avI --stats --progress --delete /home/buhrtz/Desktop/* /mnt/hdd/2015-12-23-Backup-Laptop/
+References:
+1. http://superuser.com/questions/91935/how-to-chmod-all-directories-except-files-recursively/91966
