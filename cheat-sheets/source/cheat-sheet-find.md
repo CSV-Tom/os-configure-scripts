@@ -1,5 +1,10 @@
-# find
-The following commands were collected from several sites. The sources can be found under the headline references. Basic syntax of the find command looks like:
+# Linux - find
+
+## Description
+The following commands were collected from several sites. The sources can be found under the headline references. 
+
+## Syntax
+Basic syntax of the find command looks like:
 ```
 find <location> <comparison-criteria> <search-term>
 ```
