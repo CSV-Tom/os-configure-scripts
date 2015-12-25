@@ -1,8 +1,8 @@
 # find
-The following commands were collected from several sites. The sources can be found under the headline references. The basic syntax of the find command looks like this:
-`
+The following commands were collected from several sites. The sources can be found under the headline references. Basic syntax of the find command looks like:
+```
 find <location> <comparison-criteria> <search-term>
-`
+```
 
 ## Commands
 
