@@ -73,12 +73,12 @@ Find files by text in the file (find + grep) and ignore case with -i option.
 find . -type f -name "*.java" -exec grep -il string {} \;
 ```
 
-Find files and grep content 5 lines before, 10 lines after grep matches
+Find files and grep content, 5 lines before, 10 lines after grep matches
 ```
 find . -type f -name "*.php" -exec grep -B5 -A10 'null' {} \;
 ```
 
-case-insensitive searching
+Case-insensitive searching
 ```
 find . -iname InDeX.pHp
 find . -iname foo -type d
