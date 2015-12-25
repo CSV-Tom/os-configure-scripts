@@ -1,4 +1,5 @@
 # find
+The following commands were collected from several sites. The sources can be found under the headline references.
 
 ## Commands
 ```
@@ -6,8 +7,6 @@ find -type f -print0 | xargs -r0 grep -F 'example'
 find -name '*.[ch]' | xargs grep -E 'expr'	
 find -type f -print0 | xargs -r0 grep -F 'example'
 find -maxdepth 1 -type f | xargs grep -F 'example'
-find -type f ! -perm -444
-find -type d ! -perm -111
 ```
 
 Delete all files with extension *.aux or *.o
@@ -66,6 +65,11 @@ Find all the files without permission 777.
 find / -type f ! -perm 777
 ```
 
+Find all the directories without permission 111.
+```
+find -type d ! -perm 111
+```
+
 Find all the SGID bit files whose permissions set to 644.
 ```
 find / -perm 2644
@@ -117,12 +121,12 @@ find . -type f -name "*.txt" -exec rm -f {} \;
 find . -type f -name "*.mp3" -exec rm -f {} \;
 ```
 
-To file all empty files under certain path.
+To find all empty files under certain path.
 ```
 find /tmp -type f -empty
 ```
 
-To file all empty directories under certain path.
+To find all empty directories under certain path.
 ```
 find /tmp -type d -empty
 ```
