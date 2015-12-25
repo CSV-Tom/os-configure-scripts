@@ -66,6 +66,10 @@ sudo apt-get -y install nmap          # Offensive and defensive network security
 sudo apt-get -y install iptraf        # IP Traffic Monitoring Tool
 ```
 
+### File systems
+sudo apt-get install exfat-fuse       # File system exfat   
+sudo apt-get install exfat-utils      #
+
 ### SSH-Server ###
 `
 sudo apt-get install ssh
