@@ -9,7 +9,7 @@ Basic syntax of the find command looks like:
 find <location> <comparison-criteria> <search-term>
 ```
 
-## Commands
+## Examples
 
 Limit depth of directory traversal
 ```
