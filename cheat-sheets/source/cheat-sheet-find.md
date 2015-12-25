@@ -9,6 +9,7 @@ find -maxdepth 1 -type f | xargs grep -F 'example'
 find -type f ! -perm -444
 find -type d ! -perm -111
 ```
+
 Delete all files with extension *.aux or *.o
 ```
 find -name "*.aux" -delete 
@@ -202,5 +203,8 @@ Find all .mp3 files with more than 10MB and delete them using one single command
 find / -type f -name *.mp3 -size +10M -exec rm {} \;
 ```
 
-References:
+## References
+
 1. http://superuser.com/questions/91935/how-to-chmod-all-directories-except-files-recursively/91966
+
+2. http://www.tecmint.com/35-practical-examples-of-linux-find-command/
