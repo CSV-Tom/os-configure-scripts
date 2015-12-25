@@ -1,6 +1,4 @@
 # Linux - find
-
-## Description
 The following commands were collected from several sites. The sources can be found under the headline references. 
 
 ## Syntax
@@ -36,6 +34,11 @@ Delete all files with extension *.aux or *.o
 ```
 find -name "*.aux" -delete 
 find -name "*.o" -delete
+```
+
+Delete all matching files or directories. The following command will remove all text files.
+```
+find . -type f -name "*.txt" -exec rm -f {} \;
 ```
 
 Delete only files whose name is .DS_Store (Attention: Mac OS-Systems!).
@@ -225,11 +228,18 @@ find / -size +100M -exec rm -rf {} \;
 ```
 
 Find all .mp3 files with more than 10MB and delete them using one single command.
-
 ```
 find / -type f -name *.mp3 -size +10M -exec rm {} \;
 ```
 
+Find largest and smallest files. The find command when used in combination with the ls and sort command can be used to list out the largest files. The following command will display the 5 largest file in the current directory and its subdirectory. 
+```
+find . -type f -exec ls -s {} \; | sort -n -r | head -5
+```
+Similary when sorted in ascending order, it would show the smallest files first
+```
+find . -type f -exec ls -s {} \; | sort -n | head -5
+```
 ## References
 
 1. http://superuser.com/questions/91935/how-to-chmod-all-directories-except-files-recursively/91966
