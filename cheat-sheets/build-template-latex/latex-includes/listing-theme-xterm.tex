@@ -1,0 +1,65 @@
+\definecolor{solarized-base03}{HTML}{002B36}      % background
+\definecolor{solarized-base02}{HTML}{073642}      % background highlights
+\definecolor{solarized-base01}{HTML}{586E75}      % comments /secondary content
+\definecolor{solarized-base00}{HTML}{657B83}      % 
+\definecolor{solarized-base0}{HTML}{839496}       % body text / default code / primary content
+\definecolor{solarized-base1}{HTML}{93A1A1}       % optional emphasized content
+\definecolor{solarized-base2}{HTML}{EEE8D5}       %
+\definecolor{solarized-base3}{HTML}{FDF6E3}       %
+\definecolor{solarized-yellow}{HTML}{B58900}      %
+\definecolor{solarized-orange}{HTML}{CB4B16}      %
+\definecolor{solarized-red}{HTML}{DC322F}         %
+\definecolor{solarized-magenta}{HTML}{D33682}     %
+\definecolor{solarized-violet}{HTML}{6C71C4}      %
+\definecolor{solarized-blue}{HTML}{268BD2}        %
+\definecolor{solarized-cyan}{HTML}{2AA198}        % 
+\definecolor{solarized-green}{HTML}{859900}       %
+
+\setlength{\parindent}{0em}
+
+\lstset{
+	language=bash,                                  	% Choose the language of the code
+	identifierstyle=\color{solarized-base1}\ttfamily,       % Style of identifiers
+	keywordstyle=\bfseries\ttfamily\color{solarized-cyan},  % Style of keywords
+	stringstyle=\color{solarized-blue}\ttfamily, 		% Style of variables
+	commentstyle=\color{solarized-green}\ttfamily, 		% Style of comments
+%rulesepcolor=\color{solarized-base0},
+%rulecolor=\color{solarized-base1},
+backgroundcolor=\color{solarized-base03},       % Background color
+basicstyle=\color{solarized-base0}\small\ttfamily,                % Font options (\tiny|\small|\scriptsize)
+breaklines=true, 				% Sets automatic line breaking
+%linewidth=\columnwidth,				% Line witdh
+showstringspaces=false, 			% Underline spaces within strings  				(true/false)
+showspaces=false, 				% Show spaces adding particular underscores
+showtabs=false, 				% Show tabs within strings adding particular underscores
+flexiblecolumns=true, 				% Spaltenbreite dynamisch/fest 					(true/false)
+numbers=none,					% Where to put the line-numbers 				(none/left/right)
+numberstyle=\tiny,				% The size of the fonts that are used for the line-numbers     
+numberblanklines=true,  			% Leere Zeilen durchnummerieren 	(true/false)
+stepnumber=1, 					% Beginn der Nummerierung <number>
+numbersep=5pt,	                                % Abstand zwischen Zeilennummern und Quellcode 	(10pt)
+captionpos=b, 					% Sets the caption-position to bottom
+breakatwhitespace=false,
+	xleftmargin=\parindent,                         % Distance to left border  (10pt|\parindent)
+	xrightmargin=\parindent,                        % Distance to right border (10pt|\parindent)
+	rulesep=2pt,                                    % Control the space between frame and listing and between double rules (Default=2pt)
+	frame=leftline, 				% Adds a frame around the code	(none|leftline|topline|bottomline|lines|single|shadowbox)
+	framerule=0.4pt,                                % Controls the width of the rules (Default=0.4pt)
+	framesep=0pt,                                   % <Description> (Default=3pt)
+	framexleftmargin=0pt,                           % Are the dimensions which are used additionally to framesep to make up margin of a frame
+	framexrightmargin=0pt,                          % - 
+	framextopmargin=0pt,                            % - 
+	framexbottommargin=0pt,                         % - 
+	aboveskip=\medskipamount,                       % Control the vertical space above (0pt|Default=\medskipamount)
+     	belowskip=\medskipamount,                       % Control the vertical space below (0pt|Default=\medskipamount)
+	lineskip=0pt,                                   % Specifies additional space between lines in listings (Default=0pt)
+	tabsize=2, 					% Sets default tabsize to 2 spaces
+	linewidth=\linewidth,				% Line width (\textwidth|\linewidth|columnwidth)
+}
+
+% Gute Beispiele: 
+%	- http://texwelt.de/wissen/fragen/2520/worin-besteht-der-unterschied-zwischen-textwidth-und-linewidth
+%       - http://www.jkrieger.de/tools/latex/hyperref.html
+%\DeclareCaptionFont{white}{\color{white}}
+%\DeclareCaptionFormat{listing}{\colorbox{gray}{\parbox{.98\columnwidth}{#1#2#3}}}
+%\captionsetup[lstlisting]{format=listing,labelfont=white,textfont=white}

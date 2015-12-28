@@ -1,0 +1,23 @@
+% https://esc-now.de/_/latex-individuelle-kopf--und-fusszeilen/?lang=en
+\usepackage[
+  automark,
+  headsepline,                          % Separation line below the header
+  footsepline,                          % Separation line above the footer
+  markuppercase
+]{scrpage2}
+% \pagemark                           % Insert page number
+% \headmark                           % Insert chapter name
+% \lehead{\bfseries\pagemark}         % Top left on even pages
+% \lohead{\bfseries\headmark}         % Top left on odd pages
+% \rehead{\bfseries\headmark}         % Top right on even pages
+% \rohead{\bfseries\pagemark}         % Top right on odd pages
+
+\ihead{\headmark}		                              % Top inside
+\chead{}		                                      % Top center
+\ohead{\pagemark}		                              % Top outside
+\ifoot{\scriptsize Tom Buhrtz}		                      % Bottom inside
+\cfoot{\scriptsize Version \the\year-\the\month-\the\day}     % Bottom center 
+\ofoot{\scriptsize \thepage}                                  % Bottom outside
+
+\automark[subsection]{section}
+\pagestyle{scrheadings}
