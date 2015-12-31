@@ -1,14 +1,23 @@
 
-default: distclean
-	lualatex main.tex
-	lualatex main.tex
-	lualatex main.tex
+
+TEXFILE=main
+
+$(TEXFILE).pdf: $(TEXFILE).tex
+	latexmk -f -lualatex -pdf -quiet $(TEXFILE)
+
+#default: clean
+#	lualatex $(TEXFILE).tex
+#	lualatex $(TEXFILE).tex
+#	lualatex $(TEXFILE).tex
 
 clean:
-	$(RM) *.aux
-	$(RM) *.log
-	$(RM) *.toc
-	$(RM) *.out
+	$(RM) $(TEXFILE).aux
+	$(RM) $(TEXFILE).log
+	$(RM) $(TEXFILE).toc
+	$(RM) $(TEXFILE).out
+	$(RM) $(TEXFILE).fdb_latexmk
+	$(RM) $(TEXFILE).fls
 
 distclean: clean
-	$(RM) *.pdf
+	$(RM) $(TEXFILE).pdf
+	$(RM) -r bin/
