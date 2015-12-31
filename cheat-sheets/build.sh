@@ -1,9 +1,12 @@
 #!/bin/sh
 
+SCRIPT=$(readlink -f "$0")
+SCRIPTPATH=$(dirname "$SCRIPT")
+
 FILTER=*.md                            # set search criteria
 EXTENSION=tex                          # set file extension for output files
 #OUTPUTPATH=bin                         # set output directory for generated files
-INPUTPATH=source                       # set input directory for generated files
+INPUTPATH="${SCRIPTPATH}/source"           # set input directory for generated files
 PANDOCINPUTFORMAT=markdown             # set input format for pandoc
 PANDOCOUTPUTFORMAT=latex               # set output format for pandoc
 #DEFAULTSCRIPT=default-latex.sh         # set default script
@@ -61,8 +64,8 @@ do
     shift
 done
 
-DEFAULTSCRIPT="build-format-scripts-default/default-${PANDOCOUTPUTFORMAT}.sh"  # set default script
-OUTPUTPATH="bin/${PANDOCOUTPUTFORMAT}"                            # set output directory for generated files
+DEFAULTSCRIPT="${SCRIPTPATH}/build-format-scripts-default/default-${PANDOCOUTPUTFORMAT}.sh"  # set default script
+OUTPUTPATH="${SCRIPTPATH}/bin/${PANDOCOUTPUTFORMAT}"                            # set output directory for generated files
 
 INPUT=$INPUTPATH/$FILTER                            # set input
 AUTOGENFILE=cheat-sheet-global.$EXTENSION           # set name of auto-generated file
@@ -90,7 +93,7 @@ do
 
 	# apply scripts
 	printStatusMessage "Start to apply script '$DEFAULTSCRIPT'"	
-	./$DEFAULTSCRIPT --input $OUTPUTFILE
+	sh $DEFAULTSCRIPT --input $OUTPUTFILE
 	printStatusMessage "Finish script '$DEFAULTSCRIPT'"
 	
 	cat $OUTPUTFILE >> $OUTPUTPATH/$AUTOGENFILE
