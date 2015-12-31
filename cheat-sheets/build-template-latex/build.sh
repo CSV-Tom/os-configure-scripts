@@ -6,8 +6,8 @@ cd bin
 
 ln -s ../latex-includes
 ln -s ../latex-local-content
-ln -s ../../bin/latex
 ln -s ../Makefile
+ln -s ../../bin/latex
 
 INPUT="latex/*.tex"
 
@@ -19,7 +19,7 @@ do
 	cp ../main.tex .
 	sed -i "s@\@{var-file}@$file@g" main.tex
 		
-	make 
+	make -j4 
 	make clean
 	
 	OUTFILENAME=`basename $file`
