@@ -1,24 +1,15 @@
 
 
 
-default: distclean build-html build-latex clean
+default: distclean build-html build-latex
 
 build-html:
 	./build.sh --pan-output html --extension html
 
 build-latex:
 	./build.sh
-#	lualatex main.tex
-#	lualatex main.tex
-#	lualatex main.tex
+	cd build-template-latex/; ./build.sh;
 
-
-clean:
-#	$(RM) *.aux
-#	$(RM) *.log
-#	$(RM) *.toc
-#	$(RM) *.out
-
-distclean: clean
+distclean: 
 	$(RM) *.pdf
 	$(RM) -r bin
