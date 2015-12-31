@@ -11,5 +11,5 @@ build-latex:
 	cd build-template-latex/; ./build.sh;
 
 distclean: 
-	$(RM) *.pdf
+	cd build-template-latex/; make distclean;
 	$(RM) -r bin
