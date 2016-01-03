@@ -13,3 +13,8 @@ Configure git to use vim
 ```
 git config --global core.editor "vim"
 ```
+## Branches
+List remote branches
+```
+git ls-remote - Listet remote branches
+```
