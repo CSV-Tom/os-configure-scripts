@@ -1,5 +1,27 @@
 # sh - Shell scripts 
 
+## Standard streams
+The three I/O connections are called standard input (stdin), standard output (stdout) and standard error (stderr):
+
+*	stdin  - 0,
+*	stdout - 1,
+*	stderr - 2,
+
+```
+ls -la /home/user > stdout-channel.log
+ls -la /home/user 1> stdout-channel.log
+```
+
+It can redirect both channels simultaneously in two different files:
+```
+ls -la > stdout-channel.log 2> stderr-channel.log
+```
+
+Furthermore, it is also possible to pass stdout-channel and stderr-channel in a file:
+```
+ls -la > gemeinsam.txt 2>\&1 
+```
+
 ## Shebang `#!`
 Shebang interpreter directive: `!#interpreter [optional-arg]`.
 ```
