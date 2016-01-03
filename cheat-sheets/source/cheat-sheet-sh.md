@@ -19,7 +19,7 @@ ls -la > stdout-channel.log 2> stderr-channel.log
 
 Furthermore, it is also possible to pass stdout-channel and stderr-channel in a file:
 ```
-ls -la > gemeinsam.txt 2>\&1 
+ls -la > both-channels.log 2>\&1 
 ```
 
 ## Shebang `#!`
