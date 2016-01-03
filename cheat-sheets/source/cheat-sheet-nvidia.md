@@ -1,7 +1,7 @@
-The content is copy from website: 
-`
-http://ubuntuhandbook.org/index.php/2015/01/install-nvidia-346-35-ubuntu-1404/
-`
+
+# NVIDIA 
+
+The content is copy from website: `http://ubuntuhandbook.org/index.php/2015/01/install-nvidia-346-35-ubuntu-1404/`
 
 Before the xorg-edgers PPA updates for this driver, you can download & install the official NVIDIA package by following below steps:
 
