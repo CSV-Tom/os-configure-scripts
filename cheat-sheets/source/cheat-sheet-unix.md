@@ -7,6 +7,11 @@ Print system information
 uname -a
 ```
 
+Initialize a terminal or query terminfo database
+```
+tput colors
+```
+
 An interface to the on-line reference manuals
 ```
 man <chapter> <command>
