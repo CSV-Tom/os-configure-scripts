@@ -55,3 +55,7 @@ and add the following line to `~/.bashrc`
 ```
 export TERM="xterm-256color"
 ```
+
+## References
+1. http://ethanschoonover.com/solarized
+
