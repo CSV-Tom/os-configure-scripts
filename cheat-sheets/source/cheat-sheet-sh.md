@@ -73,6 +73,16 @@ do
    echo "${line}"
 done
 ```
+## Directories and files
+Count directories and files
+```
+FILECOUNT="$(find . -type f -maxdepth 1 -printf x | wc -c)"
+FILECOUNT="$(find . -type f | wc -l)"
+
+DIRCOUNT="$(find . -type d -maxdepth 1 -printf x | wc -c)"
+DIRCOUNT="$(find . -type d | wc -l)"
+DIRCOUNT="$(find . -mindepth 1 -maxdepth 1 -type d | wc -l)"
+```
 
 ## Referenz
 1. http://stackoverflow.com/questions/1521462/looping-through-the-content-of-a-file-in-bash
