@@ -45,6 +45,17 @@ How many non-empty files are located under the current directory.
 find . -type f -not -empty | wc -l
 ```
 
+This solution will count filenames with spaces, newlines and dotfiles correctly.
+```
+find . -type f -maxdepth 1 -printf x | wc -c
+find . -type f | wc -l
+```
+or directories
+```
+find . -type d -maxdepth 1 -printf x | wc -c
+find . -type d | wc -l
+```
+
 Delete all files with extension *.aux or *.o
 ```
 find -name "*.aux" -delete 
@@ -298,3 +309,4 @@ find . -type f -exec ls -s {} \; | sort -n | head -5
 4. http://alvinalexander.com/unix/edu/examples/find.shtml
 5. http://www.thegeekstuff.com/2010/03/find-empty-directories-and-files/
 6. http://stackoverflow.com/questions/2016844/bash-recursively-remove-files
+7. http://stackoverflow.com/questions/13727069/count-files-and-directories-using-shell-script
