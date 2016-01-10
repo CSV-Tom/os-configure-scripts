@@ -35,10 +35,25 @@ or operator
 find -name '*.php' -o -name '*.txt'
 ```
 
+To count the number of empty files under current directory, pipe the find command to wc -l.
+```
+find . -type f -empty | wc -l
+```
+
+How many non-empty files are located under the current directory.
+```
+find . -type f -not -empty | wc -l
+```
+
 Delete all files with extension *.aux or *.o
 ```
 find -name "*.aux" -delete 
 find -name "*.o" -delete
+```
+
+Use the following command to remove all empty directories under the current directory
+```
+find . -type d -empty -exec rmdir {} \;
 ```
 
 Delete all matching files or directories. The following command will remove all text files.
@@ -49,6 +64,13 @@ find . -type f -name "*.txt" -exec rm -f {} \;
 Delete only files whose name is .DS_Store (Attention: Mac OS-Systems!).
 ```
 find . -type f -name .DS_Store -delete
+find . -name ".DS_Store" -print0 | xargs -0 rm -rf
+```
+
+Use the following command to remove all of those annoying Apple files, but this one also does it recursively through all sub-directories.
+```
+find . -name "._*" -print0 | xargs -0 rm -rf
+find . -iname '._*' -exec rm -rf {} \;
 ```
 
 Find all directories or files whose name is index.php or os-configure. 
@@ -274,3 +296,5 @@ find . -type f -exec ls -s {} \; | sort -n | head -5
 2. http://www.tecmint.com/35-practical-examples-of-linux-find-command/
 3. http://www.binarytides.com/linux-find-command-examples/
 4. http://alvinalexander.com/unix/edu/examples/find.shtml
+5. http://www.thegeekstuff.com/2010/03/find-empty-directories-and-files/
+6. http://stackoverflow.com/questions/2016844/bash-recursively-remove-files
