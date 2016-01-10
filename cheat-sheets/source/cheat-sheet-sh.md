@@ -50,3 +50,29 @@ Absolute path this script is in, thus `/home/$USER/bin`.
 ```
 SCRIPTPATH=$(dirname "$SCRIPT")
 ```
+
+## Read file content
+Looping through the content of a file. 
+```
+while read line; do
+  echo $line
+done < example.in
+```
+Exceptionally, if the loop body may read from standard input, you can open the file using a different file descriptor
+```
+while read -u 10 line; do
+  ...
+done 10 < example.in
+```
+10 is just an arbitrary number (different from 0, 1, 2).
+
+Another solution is:
+```
+cat peptides.txt | while read line
+do
+   echo "${line}"
+done
+```
+
+## Referenz
+1. http://stackoverflow.com/questions/1521462/looping-through-the-content-of-a-file-in-bash
