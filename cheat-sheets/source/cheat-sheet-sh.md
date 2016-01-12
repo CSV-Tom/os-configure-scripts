@@ -84,5 +84,11 @@ DIRCOUNT="$(find . -type d | wc -l)"
 DIRCOUNT="$(find . -mindepth 1 -maxdepth 1 -type d | wc -l)"
 ```
 
+## Hacks
+Redirect output to a location you don't have permission to write?
+```
+sudo sh -c 'echo "export PATH=$PATH:/opt/tbsw-buidler/bin" > /etc/profile.d/tbsw-builder.sh'
+```
+
 ## Referenz
 1. http://stackoverflow.com/questions/1521462/looping-through-the-content-of-a-file-in-bash
