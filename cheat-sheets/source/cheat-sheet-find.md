@@ -302,6 +302,12 @@ Similary when sorted in ascending order, it would show the smallest files first
 ```
 find . -type f -exec ls -s {} \; | sort -n | head -5
 ```
+
+Execute script for every directory
+```
+find . -type d -exec ./script.sh {} \;
+```
+
 ## References
 1. http://superuser.com/questions/91935/how-to-chmod-all-directories-except-files-recursively/91966
 2. http://www.tecmint.com/35-practical-examples-of-linux-find-command/
