@@ -84,6 +84,23 @@ DIRCOUNT="$(find . -type d | wc -l)"
 DIRCOUNT="$(find . -mindepth 1 -maxdepth 1 -type d | wc -l)"
 ```
 
+## Functions 
+Returns 0 if the specified string contains the specified substring, otherwise returns 1.
+```
+containsSubstring() {
+    string="$1"
+    substring="$2"
+    if test "${string#*$substring}" != "$string"
+    then
+        return 0    # $substring is in $string
+    else
+        return 1    # $substring is not in $string
+    fi
+}
+
+containsSubstring "*backup*" && echo "Found" || "Not found"
+```
+
 ## Hacks
 Redirect output to a location you don't have permission to write?
 ```
@@ -92,3 +109,4 @@ sudo sh -c 'echo "export PATH=$PATH:/opt/tbsw-buidler/bin" > /etc/profile.d/tbsw
 
 ## Referenz
 1. http://stackoverflow.com/questions/1521462/looping-through-the-content-of-a-file-in-bash
+2. http://stackoverflow.com/questions/2829613/how-do-you-tell-if-a-string-contains-another-string-in-unix-shell-scripting
