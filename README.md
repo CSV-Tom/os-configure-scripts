@@ -6,6 +6,7 @@
 ```
 sudo apt-get update
 sudo apt-get -y install mutt       # E-Mail client
+sudo apt-get -y install tree       # 
 sudo apt-get -y install htop       #
 sudo apt-get -y install mc         # Midnight Commander
 sudo apt-get -y install ccze       # Colored log for console
@@ -48,12 +49,13 @@ sudo apt-get -y install valgrind
 sudo apt-get -y install openjdk-7-jdk openjdk-7-source openjdk-7-demo openjdk-7-doc openjdk-7-jre-headless openjdk-7-jre-lib 
 sudo apt-get -y install asciidoc
 sudo apt-get -y install graphviz
+sudo apt-get -y install pandoc
 ```
 
 ### LaTeX ###
 ```
-sudo apt-get install -y texlive-full
-sudo apt-get install -y biber
+sudo apt-get -y install texlive-full
+sudo apt-get -y install biber
 ```
 
 ### Network tools ###
@@ -63,6 +65,10 @@ sudo apt-get -y install ngrep         # Network packet analyzer.
 sudo apt-get -y install nmap          # Offensive and defensive network security scanner
 sudo apt-get -y install iptraf        # IP Traffic Monitoring Tool
 ```
+
+### File systems
+sudo apt-get install exfat-fuse       # File system exfat   
+sudo apt-get install exfat-utils      #
 
 ### SSH-Server ###
 `

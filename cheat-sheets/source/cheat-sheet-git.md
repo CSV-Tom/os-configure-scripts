@@ -1,4 +1,3 @@
-
 # Versionsverwaltung GIT
 Wenn man wissen will welche Änderungen, von wem, in welcher Version, in einem bestimmten File vorgenommen wurden, kann man dafür `git blame` verwenden. 
 ```
@@ -12,7 +11,7 @@ Um Informationen zu einer bestimmten Version zu erhalten kann `git show` folgend
     Diff aller geänderten Dateien
 ```
 Wenn nur ein bestimmtes File betrachtet werden soll: 
-```		
+```
 git show <Hash>
 git show <Hash>:<filename>
 ```
@@ -55,7 +54,6 @@ git commit
 ```
 ### From remote repository
 
-
 ## Browse
 ```
 git status
@@ -70,3 +68,8 @@ git tag -l
 git tag
 ```
 
+## Branches
+List remote branches
+```
+git ls-remote - Listet remote branches
+```
