@@ -7,6 +7,56 @@ Vertical split of window
 :vsplit		
 ``` 
 
+$
+\begin{equation}
+\(\prod \limits_{i=1}^{n+1}i = 1\cdot 2\cdot\dots\cdot n\cdot (n+1) \)
+\end{equation}
+
+\begin{equation}
+\(\sum \limits_{i=1}^n i = \frac{n(n+1)}{2}\)
+\end{equation}
+$
+
+Horizontal split of window
+```	
+:split				
+``` 
+
+Save and quit
+```	
+:wq!				
+``` 
+
+Quit without saving
+```	
+:q!				
+``` 
+
+Delete signle sign
+```	
+:d<leerzeichen>			
+``` 
+
+Delete all signs until search string
+```	
+:d/<Search String>		
+``` 
+
+Delete actual row
+```	
+:dd				
+``` 
+
+Delete a special number of rows
+```	
+<number>dd			
+``` 
+
+Copy actual row
+```	
+:yy				
+$$
+
 Horizontal split of window
 ```	
 :split				
