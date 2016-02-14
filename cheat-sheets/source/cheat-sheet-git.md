@@ -1,4 +1,9 @@
-# Versionsverwaltung GIT
+# Git 
+
+## Description
+Git is a free and open source distributed version control system.
+
+
 Wenn man wissen will welche Änderungen, von wem, in welcher Version, in einem bestimmten File vorgenommen wurden, kann man dafür `git blame` verwenden. 
 ```
 git blame <filename>
@@ -10,51 +15,65 @@ Um Informationen zu einer bestimmten Version zu erhalten kann `git show` folgend
     Parent
     Diff aller geänderten Dateien
 ```
-Wenn nur ein bestimmtes File betrachtet werden soll: 
+Wenn nur ein bestimmtes File betrachtet werden soll:
 ```
 git show <Hash>
 git show <Hash>:<filename>
 ```
-[Thomas-Krenn]: https://www.thomas-krenn.com/de/wiki/Git\_Grundbefehle
 
-## Konfiguration von User- und E-Mail-Informationen}
+## Global options
 ```
-git config --global user.name "Test User"
-git config --global user.email "tktest@example.com"
+git config --global user.name "Max Mustermann"
+git config --global user.email "mustermann@example.com"
 git config --global core.editor "vim"
 git config --global -l
-```
+``` 
+
 ## .gitignore
 Eine weitere nützliche Konfiguration, bevor ein Repo in einem Verzeichnis erstellt wird, ist das Ignorieren von Dateien. Jene Dateien, die nicht versioniert werden sollen, kommen in die Datei `.gitignore`. Diese Einstellung macht z.B. Sinn für Verzeichnisse, die kompilierte Binaries enthalten (z.B. Verzeichnis "bin"):
 ```
 echo bin >> .gitignore
-```
-## REPOS ERSTELLEN
-Clonen eines bestehenden Repos
-```
-git clone ssh://user@domain.com/repo.git
-```
-Neues, lokales Repo erstellen
-```
-git init
-```
-## LOKALE ÄNDERUNGEN
-Veränderte Files in der Working Copy http://www.git-tower.com/blog/git-cheat-sheet-de
-```
-git status
-```
+``` 
 
 ## Create
 
-### From existing file
+Create an local repository:
 ```
 git init
 git add .
 git commit 
 ```
-### From remote repository
 
 ## Browse
+```
+git status
+git diff <hash-ref-1> <hash-ref-2>
+git log
+git blame <file>
+git tag -l
+```
+List remote references:
+```
+git ls-remote
+```
+View just remote-tracking branches:
+```
+git branch --remotes
+git branch -r
+```
+View both strictly local as well as remote-tracking branches:
+```
+git branch --all
+```
+Clone a repository:
+```
+git clone ssh://user@domain.com/repo.git
+```
+
+ 
+## Browse
+
+General:
 ```
 git status
 git diff <hash-ref-1> <hash-ref-2>
@@ -78,32 +97,26 @@ git branch -a
 ```
 
 ## Tag
-
+ 
 Listing the available tags in Git:
 ```
 git tag -l
 ```
-
 Transfer all of your tags to the remote server:
 ```
 git push origin --tags
 ```
-
 Transfer one tag to remote server:
 ```
 git push origin <tagname>
 ```
-
-Creating an annotated tag in Git:
 ```
 git tag -a v2.0 -m 'rc-v2.0'
 ```
-
 Show commit information of tag:
 ```
 git show v0.1
 ```
-
 Delete remote tag:
 ```
 git push origin :refs/tags/<tagname>
@@ -111,34 +124,28 @@ git push origin :<tagname>
 git push origin --delete <tagname>
 git push origin :v0.1
 ```
-
 Delete local tag:
 ```
 git tag -d <tagname>
 git tag -d v0.1
 ```
-
 Remove all remote tags:
 ```
 git tag -l | xargs -n 1 git push --delete origin
 ```
-
 Cleanup the local tags:
 ```
 git tag -l | xargs git tag -d
 ```
-
 Delete all local tags and get the list of remote tags:
 ```
 git tag -l | xargs git tag -d
 git fetch
 ```
-
 Create a new branch at a specific tag:
 ```
 git checkout -b <branch> <tag>
 ```
-
 If you forgot to tag the project at v1.3. Tag it later:
 ```
 git log --pretty=oneline
@@ -238,8 +245,6 @@ Remove all untracked files from working copy:
 ```
 git clean -f
 ```
-
-
 Remove all untracked files and directories from working copy:
 ```
 git clean -fd
@@ -290,7 +295,6 @@ Rewrite last commit message:
 git commit --amend
 ```
 
-
 ## Stash
 
 Temporarily stores all modified tracked files:
@@ -335,22 +339,18 @@ Discard local changes in specific file:
 ```
 git checkout HEAD <file>
 ```
-
 Reset file or directory:
 ```
 git reset <file|directory>
 ```
-
 Reset your HEAD pointer to a previous commit (Discard all changes!):
 ```
 git reset --hard <commit>
 ```
-
 To **undo** local file changes but **NOT REMOVE** your last commit:
 ```
 git reset --hard
 ```
-
 To **undo** local file changes **AND REMOVE** your last commit:
 ```
 git reset --hard HEAD
@@ -400,7 +400,10 @@ Abort changes of a File:
 git checkout -- <fileName>
 ```
 
+
+ 
 ## References
+
 1. http://stackoverflow.com/questions/4965639/rollback-to-last-git-commit
 2. http://stackoverflow.com/questions/2003505/delete-a-git-branch-both-locally-and-remotely
 3. https://git-scm.com/book/de/v1/Git-Grundlagen-Tags
@@ -408,3 +411,5 @@ git checkout -- <fileName>
 5. http://github.com
 6. https://training.github.com/kit/downloads/github-git-cheat-sheet.pdf
 7. http://zackperdue.com/tutorials/super-useful-need-to-know-git-commands
+8. https://www.thomas-krenn.com/de/wiki/Git\_Grundbefehle
+9. http://www.git-tower.com/blog/git-cheat-sheet-de
