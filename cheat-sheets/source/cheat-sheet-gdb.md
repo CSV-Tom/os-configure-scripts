@@ -58,14 +58,14 @@ There are three kind of gdb operations at a break point. They are continuing unt
 
 | Command                                | Description                                                |
 |:-------------------------------------- |:---------------------------------------------------------- |
-| b [ filename:] <line-number>           | Set break point in line
-| b [ filename:] <function>              | Set break point at the beginning of a function
-| b [ filename:] <line-number> if expr   | Set conditional breakpoint
-| watch <var|expr>                       | Add watchpoint for variable or expression
-| info break                             | Lists breakpoints and watchpoints
-| delete                                 | Deletes all breakpoints
-| delete [N]                             | Delete breakpoint N (see 'info break')
-| disable [N]                            | Disable breakpoint N (see 'info break') 
+| b [ filename:] <line-number>           | Set break point in line                                    |
+| b [ filename:] <function>              | Set break point at the beginning of a function             |
+| b [ filename:] <line-number> if expr   | Set conditional breakpoint                                 |
+| watch <var|expr>                       | Add watchpoint for variable or expression                  |
+| info break                             | Lists breakpoints and watchpoints                          |
+| delete                                 | Deletes all breakpoints                                    |
+| delete [N]                             | Delete breakpoint N (see 'info break')                     |
+| disable [N]                            | Disable breakpoint N (see 'info break')                    |
 
 
 ## Remote debugging
