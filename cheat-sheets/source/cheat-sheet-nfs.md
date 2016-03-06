@@ -42,8 +42,7 @@ sudo /etc/init.d/nfs-kernel-server restart
 Die exportierten Freigaben können per `showmount` von einem Client abgefragt werden:
 ```
 showmount -e <nfs-server> 
-showmount -e 192.168.178.48 
-
+showmount -e 192.168.178.48
 ``` 
 
 ### Hinweise
