@@ -65,6 +65,8 @@ find -name "*.o" -delete
 Use the following command to remove all empty directories under the current directory
 ```
 find . -type d -empty -exec rmdir {} \;
+# for spaces in path
+find . -type d -empty -exec rmdir "{}" \;
 ```
 
 Delete all matching files or directories. The following command will remove all text files.
