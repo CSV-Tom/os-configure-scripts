@@ -67,6 +67,8 @@ Use the following command to remove all empty directories under the current dire
 find . -type d -empty -exec rmdir {} \;
 # for spaces in path
 find . -type d -empty -exec rmdir "{}" \;
+# or
+find . -type d -empty -delete
 ```
 
 Delete all matching files or directories. The following command will remove all text files.
