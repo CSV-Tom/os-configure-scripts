@@ -17,6 +17,7 @@ clean:
 	$(RM) $(TEXFILE).out
 	$(RM) $(TEXFILE).fdb_latexmk
 	$(RM) *.fls
+	$(RM) *.swp
 
 distclean: clean
 	$(RM) $(TEXFILE).pdf
