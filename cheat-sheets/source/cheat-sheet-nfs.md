@@ -44,6 +44,12 @@ Die exportierten Freigaben können per `showmount` von einem Client abgefragt we
 showmount -e <nfs-server> 
 showmount -e 192.168.178.48
 ``` 
+Ausgabe:
+```
+Export list for 192.168.178.43:
+/home    192.168.178.21
+/var/nfs 192.168.178.21
+```
 
 ### Hinweise
 
