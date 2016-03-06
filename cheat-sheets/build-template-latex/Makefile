@@ -16,7 +16,7 @@ clean:
 	$(RM) $(TEXFILE).toc
 	$(RM) $(TEXFILE).out
 	$(RM) $(TEXFILE).fdb_latexmk
-	$(RM) $(TEXFILE).fls
+	$(RM) *.fls
 
 distclean: clean
 	$(RM) $(TEXFILE).pdf
