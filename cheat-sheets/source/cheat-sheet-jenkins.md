@@ -69,6 +69,11 @@ sudo apt-get install gitlab-ce
 sudo gitlab-ctl reconfigure
 ```
 
+## Browse to the hostname and login
+
+Username: `root`
+Password: `5iveL!fe`
+
 # References
 
 1. https://www.raspberrypi.org/documentation/remote-access/web-server/nginx.md
