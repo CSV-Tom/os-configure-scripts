@@ -74,6 +74,19 @@ sudo gitlab-ctl reconfigure
 Username: `root`
 Password: `5iveL!fe`
 
+
+```
+sudo vim /etc/gitlab/gitlab.rb
+```
+
+Change `external_url` from `yourdomain.com` to `yourdomain.com:9999`.
+
+```
+sudo gitlab-ctl reconfigure
+sudo gitlab-ctl stop
+sudo gitlab-ctl start
+```
+
 # References
 
 1. https://www.raspberrypi.org/documentation/remote-access/web-server/nginx.md
