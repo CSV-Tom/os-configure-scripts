@@ -71,9 +71,8 @@ sudo gitlab-ctl reconfigure
 
 ## Browse to the hostname and login
 
-Username: `root`
-Password: `5iveL!fe`
-
+* Username: `root`
+* Password: `5iveL!fe`
 
 ```
 sudo vim /etc/gitlab/gitlab.rb
