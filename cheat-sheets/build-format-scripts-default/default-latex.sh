@@ -38,8 +38,6 @@ sed -i 's/\\end{verbatim}/\\end{lstlisting}/g' $INPFILE	  	#
 sed -i 's/\\href{/\\footnote{/g' $INPFILE			# Replace href with footnote 
 sed -i 's/\\end{document}//g' $INPFILE				# Delete \end{document}
 
-sed -i 's/\\{longtable}/{tabular}/g' $INPFILE				# Delete \end{document}
-
 sed -i 's/ü/\\"u/g' $INPFILE 
 sed -i 's/Ü/\\"U/g' $INPFILE 
 sed -i 's/ä/\\"a/g' $INPFILE 
