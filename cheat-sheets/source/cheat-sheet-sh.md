@@ -50,6 +50,31 @@ Absolute path this script is in, thus `/home/$USER/bin`.
 ```
 SCRIPTPATH=$(dirname "$SCRIPT")
 ```
+Working directory:
+```
+echo $PWD
+# or
+dir=`pwd`
+```
+
+## Loop over set of files
+```
+#!/bin/bash
+FILES=/path/to/*.tex
+for f in $FILES
+do
+  echo "Processing $f file..."
+done
+```
+
+## Processing Command Line Arguments
+```
+#!/bin/bash
+for f in $*
+do
+  echo "Processing $f file..."
+done
+```
 
 ## Read file content
 Looping through the content of a file. 
@@ -110,3 +135,4 @@ sudo sh -c 'echo "export PATH=$PATH:/opt/tbsw-buidler/bin" > /etc/profile.d/tbsw
 ## Referenz
 1. http://stackoverflow.com/questions/1521462/looping-through-the-content-of-a-file-in-bash
 2. http://stackoverflow.com/questions/2829613/how-do-you-tell-if-a-string-contains-another-string-in-unix-shell-scripting
+3. http://www.cyberciti.biz/faq/bash-loop-over-file/
