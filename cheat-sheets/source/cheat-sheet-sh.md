@@ -132,7 +132,19 @@ Redirect output to a location you don't have permission to write?
 sudo sh -c 'echo "export PATH=$PATH:/opt/tbsw-buidler/bin" > /etc/profile.d/tbsw-builder.sh'
 ```
 
+For exmaple Cygwin is writing Unix line endings (LF) to the file. It's `$'\r'` an extra carriage-return, plus the Unix line ending.
+```
+echo "`date` User `whoami` started the script."$'\r' >> output.log
+```
+
+Execute a shell script on windows system. Git with Linux tools or CYGWin have to be installed.
+```
+"C:\Git\bin\sh.exe" "test.sh"
+```
+
 ## Referenz
+
 1. http://stackoverflow.com/questions/1521462/looping-through-the-content-of-a-file-in-bash
 2. http://stackoverflow.com/questions/2829613/how-do-you-tell-if-a-string-contains-another-string-in-unix-shell-scripting
 3. http://www.cyberciti.biz/faq/bash-loop-over-file/
+4. http://stackoverflow.com/questions/9741433/appending-a-line-break-to-an-output-file-in-a-shell-script
