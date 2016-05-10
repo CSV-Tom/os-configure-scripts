@@ -312,6 +312,16 @@ Execute script for every directory
 find . -type d -exec ./script.sh {} \;
 ```
 
+find, sed and exec
+```
+find -type f -name 'setting.*' -exec sed -i 's/Robert/Susi/g' {} \;
+```
+
+find, sed and xargs
+```
+find -type f -name 'setting.*' | xargs sed -i 's/Robert/Susi/g'
+```
+
 ## References
 1. http://superuser.com/questions/91935/how-to-chmod-all-directories-except-files-recursively/91966
 2. http://www.tecmint.com/35-practical-examples-of-linux-find-command/
